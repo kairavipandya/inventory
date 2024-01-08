@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/style.css" />
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+  </head>
+  <body>
+    <h1>Product List</h1>
+    <ul>
+      <% products.forEach(function(product) { %>
+      <li>
+        <strong><%= product.name %></strong><br />
+        Description: <%= product.description %><br />
+        Price: $<%= product.price %><br />
+      </li>
+      <% }); %>
+    </ul>
+    <a href="/add-product">Add Product</a>
+  </body>
+</html>
