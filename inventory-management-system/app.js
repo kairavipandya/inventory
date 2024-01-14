@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
+const path = require('path'); // Import the path module
 
 const app = express();
 const port = 3000; // You can change this port as needed
@@ -18,6 +19,7 @@ app.set('view engine', 'ejs');
 
 // Middleware to parse JSON requests
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // Define your MongoDB models and routes here
 
