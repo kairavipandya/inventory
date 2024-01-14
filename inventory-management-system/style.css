@@ -1,24 +1,24 @@
 /* Reset some default styles */
+
+:root {
+  --sage-green: #acc196;
+  --amber-red: #ff6b6b;
+  --dark-background: #0d0d0d;
+}
+
 body,
 h1,
 p,
 ul,
-li {
+li,
+label {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--dark-background);
 }
 
 header {
@@ -31,6 +31,11 @@ header {
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
+}
+
+p,
+label {
+  font-size: 16px;
 }
 
 ul {
@@ -50,4 +55,95 @@ a {
 
 a:hover {
   color: #0066cc;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #0099ff;
+}
+
+/* Add this to your CSS file to style the navigation bar and header */
+.navbar {
+  background-color: var(--dark-background);
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+header {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Add this to your CSS file for the product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Adjust column width as needed */
+  gap: 20px; /* Adjust the gap between products */
+}
+
+.product-box {
+  background-color: var(--sage-green);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-box:hover {
+  background-color: var(--amber-red);
+  transform: translateY(-5px); /* Add a slight upward lift on hover */
+}
+
+/* Style only the products with the specified format */
+.product-box h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-box p {
+  font-size: 16px;
 }

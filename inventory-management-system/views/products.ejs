@@ -7,17 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
   </head>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">View Products</a></li>
+        <li><a href="/add-product">Add Product</a></li>
+        <!-- Add links for other features if needed -->
+      </ul>
+    </nav>
+  </header>
   <body>
     <h1>Product List</h1>
-    <ul>
-      <% products.forEach(function(product) { %>
-      <li>
-        <strong><%= product.name %></strong><br />
-        Description: <%= product.description %><br />
-        Price: $<%= product.price %><br />
-      </li>
-      <% }); %>
-    </ul>
+    <div class="container">
+      <div class="product-grid">
+        <% products.forEach(function(product) { %>
+        <div class="product-box">
+          <h2><%= product.name %></h2>
+          <p>Description: <%= product.description %></p>
+          <p>Price: $<%= product.price %></p>
+        </div>
+        <% }); %>
+      </div>
+    </div>
     <a href="/add-product">Add Product</a>
   </body>
 </html>

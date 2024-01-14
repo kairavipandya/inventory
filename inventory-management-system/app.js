@@ -1,3 +1,4 @@
+//app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -73,36 +74,7 @@ app.get('/add-product', (req, res) => {
       res.status(500).send('Internal Server Error: ' + err.message);
     }
   });
-  
 
-// Sample products data
-const sampleProducts = [
-  {
-    name: 'Apples',
-    description: 'Fresh red apples',
-    price: 1.99,
-  },
-  {
-    name: 'Bananas',
-    description: 'Ripe bananas',
-    price: 0.79,
-  },
-  {
-    name: 'Milk',
-    description: '1 gallon of whole milk',
-    price: 2.49,
-  },
-  {
-    name: 'Bread',
-    description: 'Whole wheat bread',
-    price: 2.29,
-  },
-  {
-    name: 'Eggs',
-    description: 'Dozen large eggs',
-    price: 1.99,
-  },
-];
 
 // Start the server
 app.listen(port, () => {
