@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/inventory-management-system/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
   </head>
@@ -31,4 +30,102 @@
     </div>
     <a href="/add-product">Add Product</a>
   </body>
+  <style>
+    /* Reset some default styles */
+
+    :root {
+      --sage-green: #acc196;
+      --amber-red: #ff6b6b;
+      --dark-background: #fff;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--dark-background);
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .container {
+        max-width: 90%;
+        padding: 15px;
+      }
+    }
+
+    .navbar {
+      background-color: var(--dark-background);
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: var(--amber-red);
+    }
+
+    .product-box {
+      background-color: var(--sage-green);
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+      margin-bottom: 20px;
+    }
+
+    .product-box:hover {
+      transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    .product-box h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-box p {
+      font-size: 16px;
+    }
+
+    /* Style for price */
+    .product-box .price {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
 </html>
